@@ -66,9 +66,15 @@ class Hidden:
             # ---------------- Train the discriminator -----------------------------
             self.optimizer_discrim.zero_grad()
             # train on cover
-            d_target_label_cover = torch.full((batch_size, 1), self.cover_label, device=self.device)
-            d_target_label_encoded = torch.full((batch_size, 1), self.encoded_label, device=self.device)
-            g_target_label_encoded = torch.full((batch_size, 1), self.cover_label, device=self.device)
+            d_target_label_cover = torch.full(
+                (batch_size, 1), self.cover_label, device=self.device, dtype=torch.float32
+            )
+            d_target_label_encoded = torch.full(
+                (batch_size, 1), self.encoded_label, device=self.device, dtype=torch.float32
+            )
+            g_target_label_encoded = torch.full(
+                (batch_size, 1), self.cover_label, device=self.device, dtype=torch.float32
+            )
 
             d_on_cover = self.discriminator(images)
             d_loss_on_cover = self.bce_with_logits_loss(d_on_cover, d_target_label_cover)
@@ -139,9 +145,16 @@ class Hidden:
         self.encoder_decoder.eval()
         self.discriminator.eval()
         with torch.no_grad():
-            d_target_label_cover = torch.full((batch_size, 1), self.cover_label, device=self.device)
-            d_target_label_encoded = torch.full((batch_size, 1), self.encoded_label, device=self.device)
-            g_target_label_encoded = torch.full((batch_size, 1), self.cover_label, device=self.device)
+            d_target_label_cover = torch.full(
+                (batch_size, 1), self.cover_label, device=self.device, dtype=torch.float32
+            )
+            d_target_label_encoded = torch.full(
+                (batch_size, 1), self.encoded_label, device=self.device, dtype=torch.float32
+            )
+            g_target_label_encoded = torch.full(
+                (batch_size, 1), self.cover_label, device=self.device, dtype=torch.float32
+            )
+
 
             d_on_cover = self.discriminator(images)
             d_loss_on_cover = self.bce_with_logits_loss(d_on_cover, d_target_label_cover)
