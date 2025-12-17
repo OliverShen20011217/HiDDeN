@@ -1,0 +1,10 @@
+C:\Users\shenz\coco2017\val\val_class\000000000139.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000285.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000632.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000724.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000776.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000785.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000802.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000872.jpg
+C:\Users\shenz\coco2017\val\val_class\000000000885.jpg
+C:\Users\shenz\coco2017\val\val_class\000000001000.jpg

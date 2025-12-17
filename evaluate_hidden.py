@@ -26,8 +26,8 @@ def build_hidden_config():
     Adjust here ONLY if you changed the architecture during training.
     """
     config = HiDDenConfiguration(
-        H=128,
-        W=128,
+        H=224,
+        W=224,
         message_length=30,
         encoder_blocks=4,
         encoder_channels=64,
@@ -62,8 +62,8 @@ def load_hidden_model(checkpoint_path: str, device: torch.device):
 
     # === 1. 手动构造与训练时一致的配置 ===
     config = HiDDenConfiguration(
-        H=128,
-        W=128,
+        H=224,
+        W=224,
         message_length=30,
         encoder_blocks=4,
         encoder_channels=64,
